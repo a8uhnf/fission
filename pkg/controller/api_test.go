@@ -353,7 +353,7 @@ func TestMain(m *testing.M) {
 	go Start(logger, 8888, true)
 
 	time.Sleep(5 * time.Second)
-	g.client = client.MakeClient("http://localhost:8888")
+	g.client = client.MakeClient("http://localhost:8888", nil)
 
 	resp, err := http.Get("http://localhost:8888/")
 	panicIf(err)

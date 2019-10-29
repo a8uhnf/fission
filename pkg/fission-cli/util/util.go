@@ -48,7 +48,7 @@ func GetApiClient(serverUrl string) *client.Client {
 		serverUrl = "http://" + serverUrl
 	}
 
-	return client.MakeClient(serverUrl)
+	return client.MakeClient(serverUrl, nil)
 }
 
 func GetFissionNamespace() string {
